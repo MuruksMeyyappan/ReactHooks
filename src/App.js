@@ -13,35 +13,37 @@ import ClassIntervalCounter from "./components/ClassIntervalCounter";
 import HookIntervalCounter from "./components/HookIntervalCounter";
 import DataFetching from "./components/DataFetching";
 import ComponentC from "./components/ComponentC";
-export const userContext = React.createContext()
-export const channelContext = React.createContext()
-function App () {
-
-  
+import UseReducerCounter from "./components/UseReducerCounter";
+import UseReducerCounter2 from "./components/UseReducerCounter2";
+import UseReducerCounter3 from "./components/UseReducerCounter3";
+// export const userContext = React.createContext()
+// export const channelContext = React.createContext()
+function App() {
   return (
     <div>
-      
-        {/* <ClassCounter /> */}
-        {/* <HookCounter /> */}
-        {/* <HookCounter2 /> */}
-        {/* <HookCounter3 /> */}
-        {/* <HookCounter4 /> */}
-        {/* <ClassCounterOne /> */}
-        {/* <HookUseEffectCounter /> */}
-        {/* <ClassMouse /> */}
-        {/* <HookMouse /> */}
-        {/* <MouseContainer /> */}
-        {/* <ClassIntervalCounter /> */}
-        {/* <HookIntervalCounter /> */}
-        {/* <DataFetching /> */}
-        <userContext.Provider value={'Muruks'}>
+      {/* <ClassCounter /> */}
+      {/* <HookCounter /> */}
+      {/* <HookCounter2 /> */}
+      {/* <HookCounter3 /> */}
+      {/* <HookCounter4 /> */}
+      {/* <ClassCounterOne /> */}
+      {/* <HookUseEffectCounter /> */}
+      {/* <ClassMouse /> */}
+      {/* <HookMouse /> */}
+      {/* <MouseContainer /> */}
+      {/* <ClassIntervalCounter /> */}
+      {/* <HookIntervalCounter /> */}
+      {/* <DataFetching /> */}
+      {/* <userContext.Provider value={'Muruks'}>
           <channelContext.Provider value={'Reacthook'} >
             <ComponentC />
           </channelContext.Provider>
-        </userContext.Provider>
-       
+        </userContext.Provider> */}
+      {/* <UseReducerCounter /> */}
+      {/* <UseReducerCounter2 /> */}
+      <UseReducerCounter3 />
     </div>
   );
-};
+}
 
 export default App;
