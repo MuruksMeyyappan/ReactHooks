@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import ClassCounter from "../src/components/classCounter";
 import HookCounter from "./components/HookCounter";
 import HookCounter2 from "./components/HookCounter2";
@@ -16,9 +16,29 @@ import ComponentC from "./components/ComponentC";
 import UseReducerCounter from "./components/UseReducerCounter";
 import UseReducerCounter2 from "./components/UseReducerCounter2";
 import UseReducerCounter3 from "./components/UseReducerCounter3";
+import ComponentA from "./components/UseReducerandUseContext/ComponentA";
+import ComponentB from "./components/UseReducerandUseContext/ComponentB";
+import ComponentsC from "./components/UseReducerandUseContext/ComponentsC";
+import DataFectingOne from "./components/DataFecting/DataFectingOne";
+import DataFectingReducer from "./components/DataFecting/DataFectingReducer";
 // export const userContext = React.createContext()
 // export const channelContext = React.createContext()
+export const CountContext = React.createContext();
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
       {/* <ClassCounter /> */}
@@ -41,7 +61,17 @@ function App() {
         </userContext.Provider> */}
       {/* <UseReducerCounter /> */}
       {/* <UseReducerCounter2 /> */}
-      <UseReducerCounter3 />
+      {/* <UseReducerCounter3 /> */}
+      {/* <CountContext.Provider
+        value={{ countState: count, countDispatch: dispatch }}
+      >
+        Count - {count}
+        <ComponentA />
+        <ComponentB />
+        <ComponentsC />
+      </CountContext.Provider> */}
+      {/* <DataFectingOne /> */}
+      <DataFectingReducer />
     </div>
   );
 }
