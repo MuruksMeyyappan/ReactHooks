@@ -21,6 +21,15 @@ import ComponentB from "./components/UseReducerandUseContext/ComponentB";
 import ComponentsC from "./components/UseReducerandUseContext/ComponentsC";
 import DataFectingOne from "./components/DataFecting/DataFectingOne";
 import DataFectingReducer from "./components/DataFecting/DataFectingReducer";
+import ParentComp from "./components/UseCallback/ParentComp";
+import CounterMemo from "./components/UseMemoHook/CounterMemo";
+import FocusInput from "./components/UseRefHook/FocusInput";
+import HookTimer from "./components/UseRefHook/HookTimer";
+import CustomeTitleOne from "./components/CustomeHook.js/CustomeTitleOne";
+import CustomeTitleTwo from "./components/CustomeHook.js/CustomeTileTwo";
+import CustomerCounterHookTwo from "./components/CustomeHook.js/CustomerCounterHookTwo";
+import CustomerCounterHookOne from "./components/CustomeHook.js/CustomerCounterHookOne";
+import CustomeInputHooks from "./components/CustomeHook.js/CustomeInputHooks";
 // export const userContext = React.createContext()
 // export const channelContext = React.createContext()
 export const CountContext = React.createContext();
@@ -71,7 +80,16 @@ function App() {
         <ComponentsC />
       </CountContext.Provider> */}
       {/* <DataFectingOne /> */}
-      <DataFectingReducer />
+      {/* <DataFectingReducer /> */}
+      {/* <ParentComp /> */}
+      {/* <CounterMemo /> */}
+      {/* <FocusInput /> */}
+      {/* <HookTimer /> */}
+      {/* <CustomeTitleOne />
+      <CustomeTitleTwo /> */}
+      {/* <CustomerCounterHookOne />
+      <CustomerCounterHookTwo /> */}
+      <CustomeInputHooks />
     </div>
   );
 }
